@@ -1,8 +1,11 @@
 package lk.rent.spring.service;
 
+import lk.rent.spring.dto.RentDTO;
 import lk.rent.spring.entity.Rent;
 import lk.rent.spring.repo.RentRepo;
 import lk.rent.spring.service.impl.RentService;
+import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,18 +19,21 @@ public class RentServiceImpl implements RentService {
     @Autowired
     RentRepo rentRepo;
 
+    @Autowired
+    private ModelMapper modelMapper;
+
     @Override
-    public void saveRent(Rent entity) {
-        rentRepo.save(entity);
+    public void saveRent(RentDTO dto) {
+        rentRepo.save(modelMapper.map(dto, Rent.class));
     }
 
     @Override
-    public Rent searchRent(String id) {
-        return rentRepo.findById(id).get();
+    public RentDTO searchRent(String id) {
+        return modelMapper.map(rentRepo.findById(id).get(), RentDTO.class);
     }
 
     @Override
-    public List<Rent> getAllRent() {
-        return rentRepo.findAll();
+    public List<RentDTO> getAllRent() {
+        return modelMapper.map(rentRepo.findAll(), new TypeToken<List<RentDTO>>(){}.getType());
     }
 }

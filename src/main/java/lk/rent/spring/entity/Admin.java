@@ -15,6 +15,6 @@ import javax.persistence.Id;
 @ToString
 public class Admin {
     @Id
-    String username;
-    String password;
+    private String username;
+    private String password;
 }

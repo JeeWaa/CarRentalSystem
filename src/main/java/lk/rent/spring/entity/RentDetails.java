@@ -15,10 +15,11 @@ import javax.persistence.Id;
 @ToString
 public class RentDetails {
     @Id
-    String rentDetailsId;
-    String rentId;
-    int qty;
-    String rentDuration;
-    String time;
-    String date;
+    private String rentDetailsId;
+    private String rentId;
+    private String driverId;
+    private int qty;
+    private String rentDuration;
+    private String time;
+    private String date;
 }

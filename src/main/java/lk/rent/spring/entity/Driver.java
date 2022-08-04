@@ -15,9 +15,11 @@ import javax.persistence.Id;
 @ToString
 public class Driver {
     @Id
-    String driverId;
-    String name;
-    String address;
-    String email;
-    String number;
+    private String driverId;
+    private String username;
+    private String password;
+    private String name;
+    private String address;
+    private String email;
+    private String number;
 }

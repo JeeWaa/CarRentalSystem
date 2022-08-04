@@ -24,20 +24,20 @@ class DriverRepoTest {
 
     @Test
     public void save() {
-        Driver driver1 = new Driver("D001","Amal","Kalutara","amal@gmail.com","0772558947");
-        Driver driver2 = new Driver("D002","Amara","Colombo","amara@gmail.com","0778996544");
-        repo.save(driver1);
-        repo.save(driver2);
+//        Driver driver1 = new Driver("D001","Amal","Kalutara","amal@gmail.com","0772558947");
+//        Driver driver2 = new Driver("D002","Amara","Colombo","amara@gmail.com","0778996544");
+//        repo.save(driver1);
+//        repo.save(driver2);
     }
 
     @Test
     public void update() {
-        if (repo.existsById("D001")) {
-            Driver driver1 = new Driver("D001","Amal","Panadura","amal@gmail.com","0772558947");
-            repo.save(driver1);
-        }else {
-            throw new RuntimeException("No update");
-        }
+//        if (repo.existsById("D001")) {
+//            Driver driver1 = new Driver("D001","Amal","Panadura","amal@gmail.com","0772558947");
+//            repo.save(driver1);
+//        }else {
+//            throw new RuntimeException("No update");
+//        }
     }
 
     @Test

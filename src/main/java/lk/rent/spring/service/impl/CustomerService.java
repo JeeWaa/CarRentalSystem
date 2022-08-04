@@ -1,15 +1,16 @@
 package lk.rent.spring.service.impl;
 
+import lk.rent.spring.dto.CustomerDTO;
 import lk.rent.spring.entity.Customer;
 
 import java.util.List;
 
 public interface CustomerService {
 
-    void saveCustomer(Customer entity);
-    void updateCustomer(Customer entity);
+    void saveCustomer(CustomerDTO dto);
+    void updateCustomer(CustomerDTO dto);
     void deleteCustomer(String id);
-    Customer searchCustomer(String id);
-    List<Customer> getAllCustomer();
+    CustomerDTO searchCustomer(String id);
+    List<CustomerDTO> getAllCustomer();
 
 }

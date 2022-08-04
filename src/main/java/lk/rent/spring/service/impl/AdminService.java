@@ -1,9 +1,10 @@
 package lk.rent.spring.service.impl;
 
+import lk.rent.spring.dto.AdminDTO;
 import lk.rent.spring.entity.Admin;
 
 public interface AdminService {
-    void saveAdmin(Admin entity);
-    void updateAdmin(Admin entity);
-    Admin searchAdmin(String id);
+    void saveAdmin(AdminDTO dto);
+    void updateAdmin(AdminDTO dto);
+    AdminDTO searchAdmin(String id);
 }

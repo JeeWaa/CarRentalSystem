@@ -24,8 +24,8 @@ class RentDetailsRepoTest {
 
     @Test
     public void save() {
-        RentDetails rentDetails = new RentDetails("RD001","R001",10,"12h","08:30:00","08:04:2022");
-        repo.save(rentDetails);
+//        RentDetails rentDetails = new RentDetails("RD001","R001",10,"12h","08:30:00","08:04:2022");
+//        repo.save(rentDetails);
     }
 
     @Test

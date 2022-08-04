@@ -15,6 +15,6 @@ import javax.persistence.Id;
 @ToString
 public class Rent {
     @Id
-    String rentId;
-    String customerId;
+    private String rentId;
+    private String customerId;
 }

@@ -2,9 +2,2340 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>UI</title>
+
+    <link rel="stylesheet" href="assets/resource/normalize.css">
+    <link href="assets/css/fonts/css/all.css" rel="stylesheet">
+    <link href="assets/css/fontawesome/css/all.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body > main {
+            display: block;
+        }
+        body > section {
+            display: none;
+        }
+        body > section:nth-child(2) {
+            display: block;
+        }
+        body > section:nth-child(3) {
+            display: block;
+        }
+
+        body {
+            /*background-color: rgba(188, 173, 203, 0.25);*/
+            background-color: #e6eaec;
+        }
+
+        /*    header    */
+        header > i {
+            font-size: 60px;
+            color: white;
+            padding: 20px;
+        }
+        body > main > section:nth-child(2) {
+            height: 500px;
+            background-color: blue;
+        }
+        header {
+            height: 70px;
+            position: relative;
+            background-color: blue;
+        }
+        ul {
+            list-style: none;
+            position: absolute;
+            right: 0;
+            top: 14px;
+            bottom: 0;
+            margin: auto;
+        }
+        ul > li {
+            padding-right: 30px;
+            font-size: 18px;
+            color: #ffffff;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            font-family: 'Mukta', sans-serif;
+        }
+        ul > button {
+            margin-right: 18px;
+        }
+        li:hover {
+            color: #0dcaf0;
+            cursor: pointer;
+        }
+
+        /*    main    */
+        body > main > section:nth-child(3) {
+            position: relative;
+        }
+        body > main > section:nth-child(2) > h1 {
+            font-size: 100px;
+            padding-left: 30px;
+            padding-top: 60px;
+            color: white;
+            font-family: 'Mukta', sans-serif;
+        }
+        body > main > section:nth-child(2) > h2 {
+            font-size: 20px;
+            padding-left: 36px;
+            color: white;
+            font-family: 'Mukta', sans-serif;
+        }
+        body > main > section:nth-child(2) >img {
+            height: 380px;
+            position: absolute;
+            right: 0;
+            bottom: 80px;
+            margin: auto;
+        }
+        body > main > section:nth-child(3) {
+            height: 80px;
+            width: 1000px;
+            left: 0;
+            right: 0;
+            top: -50px;
+            bottom: 0;
+            margin: auto;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 10px 10px 30px 1px rgba(19, 19, 19, 0.38);
+        }
+        body > main > section:nth-child(3) > div {
+            width: 80px;
+            /*border-radius: 10px;*/
+            /*border: 2px solid red;*/
+            position: relative;
+        }
+        body > main > section:nth-child(3) > div > i {
+            font-size: 28px;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 16px;
+            margin: auto;
+            color: #8d74bd;
+        }
+
+        /*    cars    */
+        body > section:nth-child(2) > section {
+            display: flex;
+            justify-content: space-around;
+            /*border: 2px solid red;*/
+            margin-bottom: 40px;
+        }
+        body > section:nth-child(2) > section > div {
+            height: 300px;
+            width: 250px;
+            /*border: 2px solid red;*/
+            border-radius: 20px;
+            position: relative;
+            background-color: white;
+        }
+        body > section:nth-child(2) > section > div:hover {
+            /*height: 312px;*/
+            /*width: 260px;*/
+            cursor: pointer;
+            box-shadow: 0 0 30px 1px rgba(19, 19, 19, 0.38);
+        }
+        body > section:nth-child(2) > section > div > img {
+            height: 140px;
+            width: 250px;
+            border-radius: 20px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+        }
+        body > section:nth-child(2) > section > div > div {
+            height: 20px;
+            width: 70px;
+            background-color: #8ba41a;
+            border-radius: 20px;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            margin: auto;
+        }
+        strong {
+            color: white;
+            font-size: 14px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            text-align: center;
+            font-family: 'Mukta', sans-serif;
+        }
+
+        /*    contact    */
+        body > section:nth-child(3) {
+            height: 300px;
+            background-color: #343a40;
+            position: relative;
+        }
+        body > section:nth-child(3) > h4 {
+            color: white;
+            font-size: 22px;
+            padding: 16px;
+            font-family: 'Mukta', sans-serif;
+        }
+        footer {
+            display: flex;
+            /*border: 2px solid red;*/
+            left: 86%;
+            top: 260px;
+            right: 10px;
+            bottom: 10px;
+            margin: auto;
+            position: absolute;
+        }
+        address > i {
+            color: white;
+            font-size: 24px;
+            padding-right: 20px;
+        }
+        address > i:hover {
+            color: #0c63e4;
+            cursor: pointer;
+        }
+
+        /*    sign in admin    */
+        body > section:nth-child(4) {
+            position: relative;
+        }
+        body > section:nth-child(4) > div {
+            height: 640px;
+            background-color: #0c63e4;
+            border-bottom: 2px solid red;
+        }
+        body > section:nth-child(4) > div > div {
+            height: 480px;
+            width: 380px;
+            border-radius: 16px;
+            background-color: #ffffff;
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 80px;
+            margin: auto;
+        }
+        body > section:nth-child(4) > div > div >h2 {
+            color: #0a53be;
+            text-align: center;
+            padding-top: 30px;
+        }
+        body > section:nth-child(4) > div > div > form {
+            width: 310px;
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 80px;
+            margin: auto;
+        }
+        body > section:nth-child(4) > div > div > form > div {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        body > section:nth-child(4) > div > div > form > div:nth-child(3) {
+            height: 22px;
+        }
+        body > section:nth-child(4) > div > div > form > div > input {
+            border-radius: 20px;
+        }
+        body > section:nth-child(4) > div > div > form > div > p {
+            color: #0d6efd;
+            height: 20px;
+            font-size: 16px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        body > section:nth-child(4) > div > div > form > div > p:hover {
+            cursor: pointer;
+        }
+        body > section:nth-child(4) > div > div > form > div > button {
+            border-radius: 20px;
+            width: 310px;
+        }
+        body > section:nth-child(4) > div > div > div {
+            display: flex;
+            justify-content: space-around;
+            width: 380px;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 420px;
+            bottom: 0;
+            margin: auto;
+        }
+        body > section:nth-child(4) > div > div > div > p {
+            color: #4f5050;
+            font-size: 16px;
+        }
+        body > section:nth-child(4) > div > div > div > p:hover {
+            cursor: pointer;
+        }
+
+        /*    sign in customer    */
+        body > section:nth-child(5) {
+            position: relative;
+        }
+        body > section:nth-child(5) > div {
+            height: 640px;
+            background-color: #0c63e4;
+            border-bottom: 2px solid red;
+        }
+        body > section:nth-child(5) > div > div {
+            height: 480px;
+            width: 380px;
+            border-radius: 16px;
+            background-color: #ffffff;
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 80px;
+            margin: auto;
+        }
+        body > section:nth-child(5) > div > div >h2 {
+            color: #0a53be;
+            text-align: center;
+            padding-top: 30px;
+        }
+        body > section:nth-child(5) > div > div > form {
+            width: 310px;
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 80px;
+            margin: auto;
+        }
+        body > section:nth-child(5) > div > div > form > div {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        body > section:nth-child(5) > div > div > form > div:nth-child(3) {
+            height: 22px;
+        }
+        body > section:nth-child(5) > div > div > form > div > input {
+            border-radius: 20px;
+        }
+        body > section:nth-child(5) > div > div > form > div > p {
+            color: #0d6efd;
+            height: 20px;
+            font-size: 16px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        body > section:nth-child(5) > div > div > form > div > p:hover {
+            cursor: pointer;
+        }
+        body > section:nth-child(5) > div > div > form > div > button {
+            border-radius: 20px;
+            width: 310px;
+        }
+        body > section:nth-child(5) > div > div > div {
+            display: flex;
+            justify-content: space-around;
+            width: 380px;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 420px;
+            bottom: 0;
+            margin: auto;
+        }
+        body > section:nth-child(5) > div > div > div > p {
+            color: #4f5050;
+            font-size: 16px;
+        }
+        body > section:nth-child(5) > div > div > div > p:hover {
+            cursor: pointer;
+        }
+
+        /*    sign in driver    */
+        body > section:nth-child(6) {
+            position: relative;
+        }
+        body > section:nth-child(6) > div {
+            height: 640px;
+            background-color: #0c63e4;
+            border-bottom: 2px solid red;
+        }
+        body > section:nth-child(6) > div > div {
+            height: 480px;
+            width: 380px;
+            border-radius: 16px;
+            background-color: #ffffff;
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 80px;
+            margin: auto;
+        }
+        body > section:nth-child(6) > div > div >h2 {
+            color: #0a53be;
+            text-align: center;
+            padding-top: 30px;
+        }
+        body > section:nth-child(6) > div > div > form {
+            width: 310px;
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 80px;
+            margin: auto;
+        }
+        body > section:nth-child(6) > div > div > form > div {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        body > section:nth-child(6) > div > div > form > div:nth-child(3) {
+            height: 22px;
+        }
+        body > section:nth-child(6) > div > div > form > div > input {
+            border-radius: 20px;
+        }
+        body > section:nth-child(6) > div > div > form > div > p {
+            color: #0d6efd;
+            height: 20px;
+            font-size: 16px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        body > section:nth-child(6) > div > div > form > div > p:hover {
+            cursor: pointer;
+        }
+        body > section:nth-child(6) > div > div > form > div > button {
+            border-radius: 20px;
+            width: 310px;
+        }
+        body > section:nth-child(6) > div > div > div {
+            display: flex;
+            justify-content: space-around;
+            width: 380px;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 420px;
+            bottom: 0;
+            margin: auto;
+        }
+        body > section:nth-child(6) > div > div > div > p {
+            color: #4f5050;
+            font-size: 16px;
+        }
+        body > section:nth-child(6) > div > div > div > p:hover {
+            cursor: pointer;
+        }
+
+        /*    register customer    */
+
+        body > section:nth-child(7) {
+            position: relative;
+            height: 634px;
+            background-color: #0c63e4;
+        }
+        body > section:nth-child(7) > div {
+            height: 520px;
+            width: 700px;
+            border-radius: 16px;
+            background-color: #ffffff;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 60px;
+            margin: auto;
+        }
+        body > section:nth-child(7) > div > form {
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 300px;
+            position: absolute;
+        }
+        body > section:nth-child(7) > div > form > div > input {
+            border-radius: 20px;
+        }
+        body > section:nth-child(7) > div > form > div > button {
+            border-radius: 20px;
+            width: 300px;
+        }
+        body > section:nth-child(7) > div > div:nth-child(2) {
+            margin-top: 460px;
+            margin-left: 20px;
+            width: 600px;
+            position: absolute;
+            display: flex;
+        }
+        body > section:nth-child(7) > div > div:nth-child(2) > input {
+            border-radius: 20px;
+        }
+        body > section:nth-child(7) > div > div:nth-child(2) > button {
+            border-radius: 20px;
+            margin-left: 20px;
+            width: 100px;
+        }
+        body > section:nth-child(7) > div > div:nth-child(3) {
+            margin-top: 20px;
+            margin-left: 350px;
+            width: 320px;
+            height: 420px;
+            border-radius: 10px;
+            border: 5px solid #e3d8d8;
+            position: absolute;
+        }
+
+        /*    register driver    */
+
+        body > section:nth-child(8) {
+            position: relative;
+            height: 634px;
+            background-color: #0c63e4;
+        }
+        body > section:nth-child(8) > div {
+            height: 520px;
+            width: 700px;
+            border-radius: 16px;
+            background-color: #ffffff;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 60px;
+            margin: auto;
+        }
+        body > section:nth-child(8) > div > form {
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 300px;
+            position: absolute;
+        }
+        body > section:nth-child(8) > div > form > div > input {
+            border-radius: 20px;
+        }
+        body > section:nth-child(8) > div > form > div > button {
+            border-radius: 20px;
+            width: 300px;
+        }
+        body > section:nth-child(8) > div > div:nth-child(2) {
+            margin-top: 460px;
+            margin-left: 20px;
+            width: 600px;
+            position: absolute;
+            display: flex;
+        }
+        body > section:nth-child(8) > div > div:nth-child(2) > input {
+            border-radius: 20px;
+        }
+        body > section:nth-child(8) > div > div:nth-child(2) > button {
+            border-radius: 20px;
+            margin-left: 20px;
+            width: 100px;
+        }
+        body > section:nth-child(8) > div > div:nth-child(3) {
+            margin-top: 20px;
+            margin-left: 350px;
+            width: 320px;
+            height: 420px;
+            border-radius: 10px;
+            border: 5px solid #e3d8d8;
+            position: absolute;
+        }
+
+        /*    customer    */
+        body > section:nth-child(9) > div:nth-child(1) {
+            width: 300px;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: white;
+            /*border: 2px solid red;*/
+        }
+        body > section:nth-child(9) > div:nth-child(1) > div {
+            width: 260px;
+            height: 60px;
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            margin: auto;
+            border: 2px solid blue;
+        }
+        body > section:nth-child(9) > div:nth-child(1) > form {
+            position: absolute;
+            left: 20px;
+            top: 80px;
+            right: 0;
+            margin: auto;
+        }
+        body > section:nth-child(9) > div:nth-child(1) > form > div > input {
+            width: 260px;
+            border-radius: 20px;
+            margin-top: 16px;
+        }
+        body > section:nth-child(9) > div:nth-child(1) > form > div:nth-child(8) {
+            margin-top: 20px;
+        }
+        body > section:nth-child(9) > div:nth-child(1) > form > div > button {
+            border-radius: 20px;
+            width: 260px;
+            margin-top: 10px;
+        }
+
+        body > section:nth-child(9) > div:nth-child(2) {
+            width: 600px;
+            height: 200px;
+            position: fixed;
+            left: 320px;
+            top: 20px;
+            margin: auto;
+            border-radius: 10px;
+            display: flex;
+            background-color: white;
+            /*border: 2px solid blue;*/
+        }
+        body > section:nth-child(9) > div:nth-child(2) > img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+        }
+        body > section:nth-child(9) > div:nth-child(2) > div {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+        }
+        body > section:nth-child(9) > div:nth-child(2) > div > label {
+            display: block;
+        }
+        body > section:nth-child(9) > div:nth-child(2) > div > label:nth-child(1) {
+            background-color: #d3b806;
+            width: 100px;
+            border-radius: 10px;
+            text-align: center;
+            margin-left: 190px;
+            margin-top: 2px;
+        }
+        body > section:nth-child(9) > div:nth-child(2) > div > label {
+            background-color: #e8e8e6;
+            width: 270px;
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+        body > section:nth-child(9) > div:nth-child(2) > div > label:nth-child(1) > p {
+            padding-bottom: 2px;
+            padding-left: 0;
+            color: white;
+        }
+        body > section:nth-child(9) > div:nth-child(2) > div > label > p {
+            padding-bottom: 1px;
+            padding-left: 20px;
+            color: #000000;
+        }
+
+        body > section:nth-child(9) > div:nth-child(3) {
+            width: 600px;
+            position: fixed;
+            left: 320px;
+            top: 240px;
+            bottom: 20px;
+            margin: auto;
+            border-radius: 10px;
+            background-color: white;
+            /*border: 2px solid darkgreen;*/
+        }
+
+        body > section:nth-child(9) > div:nth-child(4) {
+            width: 408px;
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            bottom: 20px;
+            margin: auto;
+            border-radius: 10px;
+            background-color: white;
+            /*border: 2px solid darkgreen;*/
+        }
+        body > section:nth-child(9) > div:nth-child(4) form {
+            width: 370px;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            margin: auto;
+        }
+        body > section:nth-child(9) > div:nth-child(4) form > div:nth-child(7) {
+            display: flex;
+        }
+        body > section:nth-child(9) > div:nth-child(4) form > div:nth-child(7) > input {
+            margin-left: 20px;
+        }
+        body > section:nth-child(9) > div:nth-child(4) form > div:nth-child(8) {
+            display: flex;
+        }
+        body > section:nth-child(9) > div:nth-child(4) form > div:nth-child(8) > input {
+            margin-left: 20px;
+        }
+        body > section:nth-child(9) > div:nth-child(4) form > div > label {
+            background-color: #d95a5a;
+            width: 370px;
+            height: 35px;
+            color: white;
+            display: flex;
+            border-radius: 10px;
+        }
+        body > section:nth-child(9) > div:nth-child(4) form > div > label > p {
+            padding-top: 5px;
+            padding-left: 20px;
+        }
+        body > section:nth-child(9) > div:nth-child(4) form > div {
+            margin-bottom: 10px;
+        }
+        body > section:nth-child(9) > div:nth-child(4) form > div > input {
+            border-radius: 20px;
+        }
+        body > section:nth-child(9) > div:nth-child(4) form > div > div > input {
+            border-radius: 20px;
+        }
+        body > section:nth-child(9) > div:nth-child(4) form > div > select {
+            border-radius: 20px;
+            width: 200px;
+            margin-top: 40px;
+        }
+        body > section:nth-child(9) > div:nth-child(4) form > div:nth-child(1) {
+            display: flex;
+        }
+        body > section:nth-child(9) > div:nth-child(4) form > div:nth-child(1) > select {
+            border-radius: 20px;
+            width: 200px;
+            margin-top: 0;
+        }
+        body > section:nth-child(9) > div:nth-child(4) form > div:nth-child(1) > label {
+            width: 180px;
+            margin-left: 20px;
+        }
+        body > section:nth-child(9) > div:nth-child(4) form > div > button {
+            border-radius: 20px;
+            width: 200px;
+            position: absolute;
+            right: 0;
+            bottom: -50px;
+            margin: auto;
+        }
+
+        /*    driver    */
+        body > section:nth-child(10) > div:nth-child(1) {
+            width: 300px;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: white;
+            /*border: 2px solid red;*/
+        }
+        body > section:nth-child(10) > div:nth-child(1) > div {
+            width: 260px;
+            height: 60px;
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            margin: auto;
+            border: 2px solid blue;
+        }
+        body > section:nth-child(10) > div:nth-child(1) > form {
+            position: absolute;
+            left: 20px;
+            top: 80px;
+            right: 0;
+            margin: auto;
+        }
+        body > section:nth-child(10) > div:nth-child(1) > form > div > input {
+            width: 260px;
+            border-radius: 20px;
+            margin-top: 16px;
+        }
+        body > section:nth-child(10) > div:nth-child(1) > form > div:nth-child(8) {
+            margin-top: 20px;
+        }
+        body > section:nth-child(10) > div:nth-child(1) > form > div > button {
+            border-radius: 20px;
+            width: 260px;
+            margin-top: 10px;
+        }
+
+        body > section:nth-child(10) > div:nth-child(2) {
+            position: absolute;
+            left: 320px;
+            right: 20px;
+            top: 20px;
+            margin: auto;
+            background-color: white;
+        }
+
+        /*    admin    */
+        body > section:nth-child(11) > div {
+            height: 680px;
+            width: 240px;
+            /*border-right: 2px solid #bab4c2;*/
+            position: fixed;
+            left: 0;
+            top: 0;
+            margin: auto;
+            background-color: white;
+        }
+        body > section:nth-child(11) > div > main {
+            height: 80px;
+            width: 80px;
+            border-radius: 100%;
+            margin-top: 10px;
+            margin-left: 74px;
+            margin-bottom: 50px;
+            border: 4px solid #9a8a8a;
+        }
+        body > section:nth-child(11) > div > div {
+            height: 40px;
+            width: 220px;
+            margin-top: 20px;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            display: flex;
+            border: 1px solid blue;
+            background-color: white;
+            /*background-color: #e6eaec;*/
+        }
+        body > section:nth-child(11) > div > div:hover {
+            cursor: pointer;
+            color: white;
+            /*background-color: #2766c4;*/
+            border: 0;
+            box-shadow: 0 0 20px 1px rgba(19, 19, 19, 0.6);
+        }
+        body > section:nth-child(11) > div > div > i {
+            padding-left: 20px;
+            padding-top: 10px;
+            color: #5c636a;
+        }
+        body > section:nth-child(11) > div > div > p {
+            padding-left: 20px;
+            padding-top: 7px;
+            color: #5c636a;
+            font-family: 'Mukta', sans-serif;
+        }
+
+        body > section:nth-child(11) > section {
+            width: 1080px;
+            height: 110px;
+            position: fixed;
+            display: flex;
+            top: 0;
+            left: 260px;
+            justify-content: space-around;
+            /*border: 2px solid red;*/
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            background-color: white;
+        }
+        body > section:nth-child(11) > section > div {
+            height: 80px;
+            width: 200px;
+            margin-top: 14px;
+            border: 2px solid #423ed3;
+            border-radius: 10px;
+            background-color: white;
+        }
+        body > section:nth-child(11) > section > div:hover {
+            cursor: pointer;
+            /*color: white;*/
+            /*background-color: #2766c4;*/
+            /*border: 0;*/
+            box-shadow: 0 0 20px 1px rgba(19, 19, 19, 0.21);
+        }
+        body > section:nth-child(11) > section > div > i {
+            font-size: 30px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        body > section:nth-child(11) > section > div > p {
+            font-size: 20px;
+            margin-top: -40px;
+            margin-left: 76px;
+        }
+        body > section:nth-child(11) > section > div > p:nth-child(3) {
+            margin-top: -18px;
+            font-size: 18px;
+        }
+
+        body > section:nth-child(11) > main > table {
+            margin-left: 260px;
+            margin-top: 140px;
+            width: 1080px;
+        }
+        body > section:nth-child(11) > main:nth-child(7) > table {
+            margin-left: 260px;
+            margin-top: 100px;
+            width: 1080px;
+        }
+        body > section:nth-child(11) > main:nth-child(8) > div {
+            display: flex;
+            margin-left: 260px;
+            margin-top: 140px;
+        }
+        body > section:nth-child(11) > main:nth-child(8) > div > table:nth-child(1) {
+            width: 200px;
+            margin-right: 20px;
+        }
+        body > section:nth-child(11) > main:nth-child(8) > div > table:nth-child(2) {
+            width: 860px;
+        }
+        thead > tr {
+            background-color: #0a53be;
+            color: white;
+        }
+        td > button {
+            border-radius: 20px;
+            border: 1px solid red;
+            width: 80px;
+            color: red;
+            background-color: #ffffff;
+        }
+        td > button:hover {
+            background-color: red;
+            color: white;
+        }
+        tbody > tr {
+            border-radius: 50px;
+            margin-top: 20px;
+            background-color: #ffffff;
+        }
+        tbody > tr > td:nth-child(1) {
+            color: blue;
+        }
+        tbody > tr > td:nth-child(3) {
+            color: goldenrod;
+        }
+        tbody > tr:hover {
+            height: 60px;
+            margin-bottom: 10px;
+            background-color: rgba(156, 88, 220, 0.2);
+            /*color: white;*/
+            cursor: pointer;
+            /*border-right: 0;*/
+            /*width: 1100px;*/
+            /*box-shadow: 0 0 20px 1px rgba(19, 19, 19, 0.6);*/
+        }
+        body > section:nth-child(11) > main:nth-child(5) > button {
+            background-color: blue;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            color: white;
+            font-size: 24px;
+            border: 0;
+            position: fixed;
+            margin-left: 1270px;
+            margin-top: 400px;
+        }
+        body > section:nth-child(11) > main:nth-child(6) > button {
+            background-color: blue;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            color: white;
+            font-size: 24px;
+            border: 0;
+            position: fixed;
+            margin-left: 1270px;
+            margin-top: 400px;
+        }
+        body > section:nth-child(11) > main:nth-child(3) {
+            margin-left: 260px;
+            margin-top: 140px;
+        }
+        body > section:nth-child(11) > main:nth-child(3) > input {
+            width: 400px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+        body > section:nth-child(11) > main:nth-child(3) > button {
+            width: 100px;
+            border-radius: 20px;
+            margin-top: 16px;
+        }
+        body > section:nth-child(11) > main:nth-child(3) > div >input {
+            width: 600px;
+            border-radius: 20px;
+        }
+        body > section:nth-child(11) > main:nth-child(3) > div:nth-child(6) {
+            width: 300px;
+            height: 400px;
+            border: 5px solid #e0cdcd;
+            border-radius: 10px;
+            margin-left: 700px;
+            margin-top: -320px;
+        }
+
+        body > section:nth-child(11) > main:nth-child(4) {
+            margin-left: 260px;
+            margin-top: 140px;
+        }
+        body > section:nth-child(11) > main:nth-child(4) > div {
+            height: 180px;
+            width: 1080px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            background-color: #0dcaf0;
+            border: 2px solid red;
+        }
+
+        body > section:nth-child(11) > main:nth-child(7) > form {
+            margin-top: 136px;
+        }
+        body > section:nth-child(11) > main:nth-child(7) > form > div:nth-child(2) {
+            display: flex;
+        }
+        body > section:nth-child(11) > main:nth-child(7) > form > div:nth-child(2) > input:nth-child(1) {
+            width: 290px;
+        }
+        body > section:nth-child(11) > main:nth-child(7) > form > div:nth-child(2) > input:nth-child(2) {
+            margin-left: 10px;
+            width: 100px;
+        }
+        body > section:nth-child(11) > main:nth-child(7) > form > div > input {
+            margin-left: 260px;
+            margin-top: 6px;
+            width: 400px;
+            border-radius: 20px;
+        }
+        body > section:nth-child(11) > main:nth-child(7) > form > div:nth-child(12) {
+            margin-left: 720px;
+            margin-top: -470px;
+        }
+        body > section:nth-child(11) > main:nth-child(7) > form > div:nth-child(12) > button {
+            border-radius: 20px;
+            margin-right: 20px;
+            width: 150px;
+        }
+        body > section:nth-child(11) > main:nth-child(7) > form > div:nth-child(13) {
+            margin-left: 720px;
+            margin-top: 20px;
+            width: 500px;
+        }
+        body > section:nth-child(11) > main:nth-child(7) > form > div:nth-child(13) > input {
+            margin-left: 0;
+        }
+        body > section:nth-child(11) > main:nth-child(7) > div:nth-child(2) {
+            margin-left: 720px;
+            width: 580px;
+            height: 290px;
+            margin-top: 50px;
+            border: 4px solid #ab7c7c;
+        }
+    </style>
+
 </head>
 <body>
+
+<!--    home page    -->
+<main id="homePage">
+    <header>
+        <nav>
+            <ul>
+                <li id="homePageButton">Home</li>
+                <li id="homePageCustomerButton">Customer</li>
+                <li id="homePageCarButton">Cars</li>
+                <li id="homePageDriverButton">Driver</li>
+                <li id="homePageContactButton">Contact</li>
+                <button id="signInButton" type="button" class="btn btn-outline-light">Sign in</button>
+            </ul>
+        </nav>
+        <i class="fa-solid fa-leaf"></i>
+    </header>
+    <section>
+        <h1>BLOOMS</h1>
+        <h2>Car Rental Center</h2>
+        <img src="assets/image/car_home.png">
+    </section>
+    <section>
+        <div>
+            <i class="fa-solid fa-car"></i>
+        </div>
+        <div>
+            <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div>
+            <i class="fa-solid fa-users"></i>
+        </div>
+        <div>
+            <i class="fa-solid fa-chart-line"></i>
+        </div>
+    </section>
+</main>
+
+<!--    cars page    -->
+<section id="carPage">
+    <section>
+        <div>
+            <img src="assets/image/01.jpg">
+            <section>
+                <p></p>
+            </section>
+            <div><strong>Premium</strong></div>
+        </div>
+        <div>
+            <img src="assets/image/01.jpg">
+            <section>
+                <p></p>
+            </section>
+            <div><strong>Luxury</strong></div>
+        </div>
+        <div>
+            <img src="assets/image/01.jpg">
+            <section>
+                <p></p>
+            </section>
+            <div><strong>General</strong></div>
+        </div>
+        <div>
+            <img src="assets/image/01.jpg">
+            <section>
+                <p></p>
+            </section>
+            <div><strong>Luxury</strong></div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <img src="assets/image/01.jpg">
+            <section>
+                <p></p>
+            </section>
+            <div><strong>Luxury</strong></div>
+        </div>
+        <div>
+            <img src="assets/image/01.jpg">
+            <section>
+                <p></p>
+            </section>
+            <div><strong>Premium</strong></div>
+        </div>
+        <div>
+            <img src="assets/image/01.jpg">
+            <section>
+                <p></p>
+            </section>
+            <div><strong>Luxury</strong></div>
+        </div>
+        <div>
+            <img src="assets/image/01.jpg">
+            <section>
+                <p></p>
+            </section>
+            <div><strong>General</strong></div>
+        </div>
+    </section>
+</section>
+
+<!--    contact page    -->
+<section id="contactPage">
+    <h4>BLOOMS CAR RENTAL CENTER</h4>
+    <footer>
+        <address>
+            <i class="fab fa-facebook"></i>
+        </address>
+        <address>
+            <i class="fab fa-twitter"></i>
+        </address>
+        <address>
+            <i class="fab fa-instagram"></i>
+        </address>
+        <address>
+            <i class="fab fa-facebook-messenger"></i>
+        </address>
+    </footer>
+</section>
+
+<!--    sign in admin page    -->
+<section id="signInAdminPage">
+    <div>
+        <div>
+            <h2>Sign In Admin</h2>
+            <form>
+                <div>
+                    <input id="signInAdminUsername" class="form-control" type="text" placeholder="Username" aria-label="default input example">
+                </div>
+                <div class="col-auto">
+                    <input id="signInAdminPassword" type="password" class="form-control" placeholder="Password">
+                </div>
+                <div>
+                    <p>Forgot password?</p>
+                </div>
+                <div class="col-auto">
+                    <button id="signInAdminButton" type="button" class="btn btn-primary mb-3">Login</button>
+                </div>
+            </form>
+            <div>
+                <p id="signInAdminCustomer">Sign in customer</p>
+                <p id="signInAdminDriver">Sign in driver</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--    sign in customer page    -->
+<section id="signInCustomerPage">
+    <div>
+        <div>
+            <h2>Sign In Customer</h2>
+            <form>
+                <div>
+                    <input id="signInCustomerUsername" class="form-control" type="text" placeholder="Username" aria-label="default input example">
+                </div>
+                <div class="col-auto">
+                    <input id="signInCustomerPassword" type="password" class="form-control" placeholder="Password">
+                </div>
+                <div>
+                    <p>Forgot password?</p>
+                </div>
+                <div class="col-auto">
+                    <button id="signInCustomerButton" type="button" class="btn btn-primary mb-3">Login</button>
+                </div>
+            </form>
+            <div>
+                <p id="signInCustomerAdmin">ign in admin</p>
+                <p id="signInCustomerDriver">Sign in driver</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--    sign in driver page    -->
+<section id="signInDriverPage">
+    <div>
+        <div>
+            <h2>Sign In Driver</h2>
+            <form>
+                <div>
+                    <input id="signInDriverUsername" class="form-control" type="text" placeholder="Username" aria-label="default input example">
+                </div>
+                <div class="col-auto">
+                    <input id="signInDriverPassword" type="password" class="form-control" placeholder="Password">
+                </div>
+                <div>
+                    <p>Forgot password?</p>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-primary mb-3">Login</button>
+                </div>
+            </form>
+            <div>
+                <p id="signInDriverAdmin">Sign in admin</p>
+                <p id="signInDriverCustomer">Sign in customer</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--    register Customer page    -->
+<section id="registerCustomerPage">
+    <div>
+        <form id="customerRegisterForm">
+            <div class="mb-3">
+                <input class="form-control" id="customerID" name="customerId" placeholder="Customer ID" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="customerUsername" name="username" placeholder="Customer Username" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="customerPassword" name="password" placeholder="Password" type="password">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="customerName" name="name" placeholder="Customer Name" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="customerAddress" name="address" placeholder="Customer Address" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="customerEmail" name="email" placeholder="Customer Email" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="customerNumber" name="number" placeholder="Customer Number" type="text">
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" id="registerCustomerButton" type="button">Save</button>
+            </div>
+        </form>
+        <div>
+            <input class="form-control" type="file" id="customerNIC" multiple>
+            <button class="btn btn-primary" id="customerNICButton" type="button">Upload</button>
+        </div>
+        <div></div>
+    </div>
+</section>
+
+<!--    register driver page    -->
+<section id="registerDriverPage">
+    <div>
+        <form id="driverRegisterForm">
+            <div class="mb-3">
+                <input class="form-control" id="driverID" name="driverId" placeholder="Driver ID" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="driverUsername" name="username" placeholder="Driver Username" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="driverPassword" name="password" placeholder="Password" type="password">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="driverName" name="name" placeholder="Driver Name" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="driverAddress" name="address" placeholder="Driver Address" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="driverEmail" name="email" placeholder="Driver Email" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="driverNumber" name="number" placeholder="Driver Number" type="text">
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" id="registerDriverButton" type="button">Save</button>
+            </div>
+        </form>
+        <div>
+            <input class="form-control" type="file" id="driverNIC" multiple>
+            <button class="btn btn-primary" id="driverNICButton" type="button">Upload</button>
+        </div>
+        <div></div>
+    </div>
+</section>
+
+<!--    customer page    -->
+<section id="customerPage">
+    <div>
+        <div></div>
+        <form>
+            <div>
+                <input class="form-control" id="customerPageID" name="customerId" placeholder="Customer ID" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="customerPageUsername" name="username" placeholder="Customer Username" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="customerPagePassword" name="password" placeholder="Password" type="password">
+            </div>
+            <div>
+                <input class="form-control" id="customerPageName" name="name" placeholder="Customer Name" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="customerPageAddress" name="address" placeholder="Customer Address" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="customerPageEmail" name="email" placeholder="Customer Email" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="customerPageNumber" name="number" placeholder="Customer Number" type="text">
+            </div>
+            <div>
+                <button class="btn btn-primary" id="customerPageUpdateButton" type="button">Save</button>
+                <button class="btn btn-primary" id="customerPageLogOutButton" type="button">Log Out</button>
+                <button class="btn btn-primary" id="customerPageDeleteButton" type="button">Delete Account</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <img src="assets/image/car_home.png" class="img-fluid">
+        <div>
+            <label><p id="viewRentCarType">Luxury</p></label>
+            <label><p id="viewRentCarBrand">BMW</p></label>
+            <label><p id="viewRentCarTransmission">Manual</p></label>
+            <label><p id="viewRentCarNumber">Number</p></label>
+            <label><p id="viewRentCarColor">Red</p></label>
+        </div>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Type</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Transmission</th>
+                <th scope="col">FuelType</th>
+                <th scope="col">Color</th>
+            </tr>
+            </thead>
+            <tbody id="customerPageCarTable">
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <form>
+            <div>
+<!--                <select id="carComboBox" class="form-select" aria-label="Default">-->
+<!--                    <option selected>Select Car</option>-->
+<!--                </select>-->
+                <label><p>Rent ID : </p><p id="rentID"></p></label>
+            </div>
+            <div>
+                <label><p>Passenger : </p><p id="rentPassenger"></p></label>
+            </div>
+            <div>
+                <label><p>Fuel Type : </p><p id="rentFuelType"></p></label>
+            </div>
+            <div>
+                <label><p>Free M Price : </p><p  id="rentFreeMPrice"></p></label>
+            </div>
+            <div>
+                <label><p>Free M Duration (h) : </p><p  id="rentFreeMDuration"></p></label>
+            </div>
+            <div>
+                <label><p>Extra KM Price : </p><p  id="rentExtraKMPrice"></p></label>
+            </div>
+            <div>
+                <label><p>Duration : </p><p  id="rentDuration"></p></label>
+                <input class="form-control" id="rentEnterDuration" name="customerId" placeholder="Duration" type="text">
+            </div>
+            <div>
+                <label><p>Qty : </p><p  id="rentQty"></p></label>
+                <input class="form-control" id="rentEnterQty" name="customerId" placeholder="Car Qty" type="text">
+            </div>
+            <div>
+                <select id="driverComboBox" class="form-select" aria-label="Default">
+                    <option selected>Select Driver</option>
+                </select>
+            </div>
+            <div>
+                <label><p>Driver Id : </p><p id="rentDriverId"></p></label>
+            </div>
+            <div>
+                <label><p>Driver Name : </p><p  id="rentDriverName"></p></label>
+            </div>
+            <div>
+                <button class="btn btn-primary" id="rentButton" type="button">Rent</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!--    driver page    -->
+<section id="driverPage">
+    <div>
+        <div></div>
+        <form>
+            <div>
+                <input class="form-control" id="driverPageID" name="driverId" placeholder="Driver ID" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="driverPageUsername" name="username" placeholder="Driver Username" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="driverPagePassword" name="password" placeholder="Password" type="password">
+            </div>
+            <div>
+                <input class="form-control" id="driverPageName" name="name" placeholder="Driver Name" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="driverPageAddress" name="address" placeholder="Driver Address" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="driverPageEmail" name="email" placeholder="Driver Email" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="driverPageNumber" name="number" placeholder="Driver Number" type="text">
+            </div>
+            <div>
+                <button class="btn btn-primary" id="driverPageUpdateButton" type="button">Save</button>
+                <button class="btn btn-primary" id="driverPageLogOutButton" type="button">Log Out</button>
+                <button class="btn btn-primary" id="driverPageDeleteButton" type="button">Delete Account</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">RentalDetailsID</th>
+                <th scope="col">RentalID</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Price</th>
+                <th scope="col">Time</th>
+                <th scope="col">Date</th>
+                <th scope="col">Driver</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>RD001</td>
+                <td>C001</td>
+                <td>1</td>
+                <td>1200.00</td>
+                <td>08.30</td>
+                <td>2020:08:02</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>RD001</td>
+                <td>C001</td>
+                <td>1</td>
+                <td>1200.00</td>
+                <td>08.30</td>
+                <td>2020:08:02</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>RD001</td>
+                <td>C001</td>
+                <td>1</td>
+                <td>1200.00</td>
+                <td>08.30</td>
+                <td>2020:08:02</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>RD001</td>
+                <td>C001</td>
+                <td>1</td>
+                <td>1200.00</td>
+                <td>08.30</td>
+                <td>2020:08:02</td>
+                <td>Yes</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!--    admin page    -->
+<section id="adminPage">
+    <div id="adminPageButton">
+        <main></main>
+        <div id="adminPageAdminButton">
+            <i class="fab fa-facebook-messenger"></i>
+            <p>Admin</p>
+        </div>
+        <div id="adminPageNICButton">
+            <i class="fab fa-facebook-messenger"></i>
+            <p>NIC</p>
+        </div>
+        <div id="adminPageCustomerButton">
+            <i class="fab fa-facebook-messenger"></i>
+            <p>Customer</p>
+        </div>
+        <div id="adminPageDriverButton">
+            <i class="fab fa-facebook-messenger"></i>
+            <p>Driver</p>
+        </div>
+        <div id="adminPageCarButton">
+            <i class="fab fa-facebook-messenger"></i>
+            <p>Car</p>
+        </div>
+        <div id="adminPageRentalButton">
+            <i class="fab fa-facebook-messenger"></i>
+            <p>Rental</p>
+        </div>
+        <div id="adminPageLogOutButton">
+            <i class="fab fa-facebook-messenger"></i>
+            <p>Log Out</p>
+        </div>
+    </div>
+    <section id="adminPageBar">
+        <div>
+            <i class="fab fa-facebook-messenger"></i>
+            <p>Customers</p>
+            <p>488</p>
+        </div>
+        <div>
+            <i class="fab fa-facebook-messenger"></i>
+            <p>Customers</p>
+            <p>488</p>
+        </div>
+        <div>
+            <i class="fab fa-facebook-messenger"></i>
+            <p>Customers</p>
+            <p>488</p>
+        </div>
+        <div>
+            <i class="fab fa-facebook-messenger"></i>
+            <p>Customers</p>
+            <p>488</p>
+        </div>
+    </section>
+    <main id="adminPageAdmin">
+        <input id="adminPageUsername" class="form-control" type="text" placeholder="Username" aria-label="default input example">
+        <input id="adminPagePassword" type="password" class="form-control" placeholder="Password">
+        <button type="submit" class="btn btn-primary mb-3">Update</button>
+        <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Upload profile picture</label>
+            <input class="form-control" type="file" multiple>
+        </div>
+        <button type="submit" class="btn btn-primary mb-3">Upload</button>
+        <div></div>
+    </main>
+    <main id="adminPageNIC">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </main>
+    <main id="adminPageCustomer">
+        <button>+</button>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Number</th>
+                <th scope="col">Delete</th>
+            </tr>
+            </thead>
+            <tbody id="customerTableAdmin">
+            </tbody>
+        </table>
+    </main>
+    <main id="adminPageDriver">
+        <button>+</button>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Number</th>
+                <th scope="col">Delete</th>
+            </tr>
+            </thead>
+            <tbody id="driverTableAdmin">
+            </tbody>
+        </table>
+    </main>
+    <main id="adminPageCar">
+        <form id="carRegisterForm">
+            <div>
+                <input class="form-control" id="carID" name="carId" placeholder="Car ID" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="carBrand" name="brand" placeholder="Car Brand" type="text">
+                <input class="form-control" id="carQty" name="qty" placeholder="Qty" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="carType" name="type" placeholder="Car Type" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="carPassenger" name="passenger" placeholder="Car Passenger" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="carTransmissionType" name="transmissionType" placeholder="Car Transmission Type" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="carFuelType" name="fuelType" placeholder="Car Fuel Type" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="carFreeMileagePrice" name="freeMileagePrice" placeholder="Car Free Mileage Price" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="carFreeMileageDuration" name="freeMileageDuration" placeholder="Car Free Mileage Duration" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="carExtraKMPrice" name="extraKMPrice" placeholder="Car Extra KM Price" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="carRegistrationNumber" name="registrationNumber" placeholder="Car Registration Number" type="text">
+            </div>
+            <div>
+                <input class="form-control" id="carColor" name="color" placeholder="Car Color" type="text">
+            </div>
+            <div>
+                <button class="btn btn-primary" id="adminPageCarSaveButton" type="button">Save</button>
+                <button class="btn btn-primary" id="adminPageCarUpdateButton" type="button">Update</button>
+                <button class="btn btn-primary" id="adminPageCarDeleteButton" type="button">Delete</button>
+            </div>
+            <div>
+                <label for="formFileMultiple" class="form-label">Upload profile picture</label>
+                <input class="form-control" type="file" id="formFileMultiple" multiple>
+            </div>
+        </form>
+        <div></div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Type</th>
+                <th scope="col">Passenger</th>
+                <th scope="col">Transmission</th>
+                <th scope="col">FuelType</th>
+                <th scope="col">FreeMPrice</th>
+                <th scope="col">FreeMDuration(h)</th>
+                <th scope="col">ExtraKMPrice</th>
+                <th scope="col">Number</th>
+                <th scope="col">Color</th>
+            </tr>
+            </thead>
+            <tbody id="adminPageCarTable">
+            </tbody>
+        </table>
+    </main>
+    <main id="adminPageRental">
+        <div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Rental ID</th>
+                    <th scope="col">Customer ID</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>R001</td>
+                    <td>C001</td>
+                </tr>
+                <tr>
+                    <td>R002</td>
+                    <td>C002</td>
+                </tr>
+                <tr>
+                    <td>R003</td>
+                    <td>C003</td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">RentalDetailsID</th>
+                    <th scope="col">RentalID</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Driver</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>RD001</td>
+                    <td>C001</td>
+                    <td>1</td>
+                    <td>1200.00</td>
+                    <td>08.30</td>
+                    <td>2020:08:02</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>RD001</td>
+                    <td>C001</td>
+                    <td>1</td>
+                    <td>1200.00</td>
+                    <td>08.30</td>
+                    <td>2020:08:02</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>RD001</td>
+                    <td>C001</td>
+                    <td>1</td>
+                    <td>1200.00</td>
+                    <td>08.30</td>
+                    <td>2020:08:02</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>RD001</td>
+                    <td>C001</td>
+                    <td>1</td>
+                    <td>1200.00</td>
+                    <td>08.30</td>
+                    <td>2020:08:02</td>
+                    <td>Yes</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</section>
+
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+
+    /*    home page    */
+    $("#signInButton").click(function () {
+        $("#signInAdminPage").css("display","block");
+        $("#homePage").css("display","none");
+        $("#carPage").css("display","none");
+        $("#contactPage").css("display","none");
+    });
+    $("#homePageCustomerButton").click(function () {
+        $("#registerCustomerPage").css("display","block");
+        $("#homePage").css("display","none");
+        $("#carPage").css("display","none");
+        $("#contactPage").css("display","none");
+    });
+    $("#homePageDriverButton").click(function () {
+        $("#registerDriverPage").css("display","block");
+        $("#homePage").css("display","none");
+        $("#carPage").css("display","none");
+        $("#contactPage").css("display","none");
+    });
+
+    $("#signInAdminCustomer").click(function () {
+        $("#signInAdminPage").css("display","none");
+        $("#signInCustomerPage").css("display","block");
+        $("#signInDriverPage").css("display","none");
+    });
+    $("#signInAdminDriver").click(function () {
+        $("#signInAdminPage").css("display","none");
+        $("#signInCustomerPage").css("display","none");
+        $("#signInDriverPage").css("display","block");
+    });
+    $("#signInCustomerAdmin").click(function () {
+        $("#signInAdminPage").css("display","block");
+        $("#signInCustomerPage").css("display","none");
+        $("#signInDriverPage").css("display","none");
+    });
+    $("#signInCustomerDriver").click(function () {
+        $("#signInAdminPage").css("display","none");
+        $("#signInCustomerPage").css("display","none");
+        $("#signInDriverPage").css("display","block");
+    });
+    $("#signInDriverAdmin").click(function () {
+        $("#signInAdminPage").css("display","block");
+        $("#signInCustomerPage").css("display","none");
+        $("#signInDriverPage").css("display","none");
+    });
+    $("#signInDriverCustomer").click(function () {
+        $("#signInAdminPage").css("display","none");
+        $("#signInCustomerPage").css("display","block");
+        $("#signInDriverPage").css("display","none");
+    });
+
+    $("#signInAdminButton").click(function () {
+        $("#adminPage").css("display","block");
+        $("#signInAdminPage").css("display","none");
+    });
+
+    /*    admin page    */
+
+    $("#adminPageAdminButton").click(function () {
+        $("#adminPageAdmin").css("display","block");
+        $("#adminPageNIC").css("display","none");
+        $("#adminPageCustomer").css("display","none");
+        $("#adminPageDriver").css("display","none");
+        $("#adminPageCar").css("display","none");
+        $("#adminPageRental").css("display","none");
+        $("body > section:nth-child(11) > div > div").css("background-color","white");
+        $("body > section:nth-child(11) > div > div:nth-child(2)").css("background-color","blue");
+        $("body > section:nth-child(11) > div > div > i",).css("color","#5c636a");
+        $("body > section:nth-child(11) > div > div:nth-child(2) > i",).css("color","white");
+        $("body > section:nth-child(11) > div > div > p").css("color","#5c636a");
+        $("body > section:nth-child(11) > div > div:nth-child(2) > p").css("color","white");
+    });
+    $("#adminPageNICButton").click(function () {
+        $("#adminPageAdmin").css("display","none");
+        $("#adminPageNIC").css("display","block");
+        $("#adminPageCustomer").css("display","none");
+        $("#adminPageDriver").css("display","none");
+        $("#adminPageCar").css("display","none");
+        $("#adminPageRental").css("display","none");
+        $("#adminPageAdminButton").css("background-color","white");
+        $("#adminPageNICButton").css("background-color","blue");
+        $("body > section:nth-child(11) > div > div").css("background-color","white");
+        $("body > section:nth-child(11) > div > div:nth-child(3)").css("background-color","blue");
+        $("body > section:nth-child(11) > div > div > i",).css("color","#5c636a");
+        $("body > section:nth-child(11) > div > div:nth-child(3) > i",).css("color","white");
+        $("body > section:nth-child(11) > div > div > p").css("color","#5c636a");
+        $("body > section:nth-child(11) > div > div:nth-child(3) > p").css("color","white");
+    });
+    $("#adminPageCustomerButton").click(function () {
+        $("#adminPageAdmin").css("display","none");
+        $("#adminPageNIC").css("display","none");
+        $("#adminPageCustomer").css("display","block");
+        $("#adminPageDriver").css("display","none");
+        $("#adminPageCar").css("display","none");
+        $("#adminPageRental").css("display","none");
+        $("body > section:nth-child(11) > div > div").css("background-color","white");
+        $("body > section:nth-child(11) > div > div:nth-child(4)").css("background-color","blue");
+        $("body > section:nth-child(11) > div > div > i",).css("color","#5c636a");
+        $("body > section:nth-child(11) > div > div:nth-child(4) > i",).css("color","white");
+        $("body > section:nth-child(11) > div > div > p").css("color","#5c636a");
+        $("body > section:nth-child(11) > div > div:nth-child(4) > p").css("color","white");
+    });
+    $("#adminPageDriverButton").click(function () {
+        $("#adminPageAdmin").css("display","none");
+        $("#adminPageNIC").css("display","none");
+        $("#adminPageCustomer").css("display","none");
+        $("#adminPageDriver").css("display","block");
+        $("#adminPageCar").css("display","none");
+        $("#adminPageRental").css("display","none");
+        $("body > section:nth-child(11) > div > div").css("background-color","white");
+        $("body > section:nth-child(11) > div > div:nth-child(5)").css("background-color","blue");
+        $("body > section:nth-child(11) > div > div > i",).css("color","#5c636a");
+        $("body > section:nth-child(11) > div > div:nth-child(5) > i",).css("color","white");
+        $("body > section:nth-child(11) > div > div > p").css("color","#5c636a");
+        $("body > section:nth-child(11) > div > div:nth-child(5) > p").css("color","white");
+    });
+    $("#adminPageCarButton").click(function () {
+        $("#adminPageAdmin").css("display","none");
+        $("#adminPageNIC").css("display","none");
+        $("#adminPageCustomer").css("display","none");
+        $("#adminPageDriver").css("display","none");
+        $("#adminPageCar").css("display","block");
+        $("#adminPageRental").css("display","none");
+        $("body > section:nth-child(11) > div > div").css("background-color","white");
+        $("body > section:nth-child(11) > div > div:nth-child(6)").css("background-color","blue");
+        $("body > section:nth-child(11) > div > div > i",).css("color","#5c636a");
+        $("body > section:nth-child(11) > div > div:nth-child(6) > i",).css("color","white");
+        $("body > section:nth-child(11) > div > div > p").css("color","#5c636a");
+        $("body > section:nth-child(11) > div > div:nth-child(6) > p").css("color","white");
+    });
+    $("#adminPageRentalButton").click(function () {
+        $("#adminPageAdmin").css("display","none");
+        $("#adminPageNIC").css("display","none");
+        $("#adminPageCustomer").css("display","none");
+        $("#adminPageDriver").css("display","none");
+        $("#adminPageCar").css("display","none");
+        $("#adminPageRental").css("display","block");
+        $("body > section:nth-child(11) > div > div").css("background-color","white");
+        $("body > section:nth-child(11) > div > div:nth-child(7)").css("background-color","blue");
+        $("body > section:nth-child(11) > div > div > i",).css("color","#5c636a");
+        $("body > section:nth-child(11) > div > div:nth-child(7) > i",).css("color","white");
+        $("body > section:nth-child(11) > div > div > p").css("color","#5c636a");
+        $("body > section:nth-child(11) > div > div:nth-child(7) > p").css("color","white");
+    });
+
+
+    $("#registerCustomerButton").click(function () {
+        saveCustomer();
+    });
+    $("#registerDriverButton").click(function () {
+        saveDriver();
+    });
+    $("#adminPageCarSaveButton").click(function () {
+        saveCar();
+    });
+    $("#adminPageCarTable>tr>td>button").click(function () {
+        deleteCar();
+    });
+    $("#customerPageUpdateButton").click(function () {
+        updateCustomer();
+    });
+    $("#customerPageDeleteButton").click(function () {
+        deleteCustomer();
+    });
+    $("#driverPageUpdateButton").click(function () {
+        updateDriver();
+    });
+    $("#driverPageDeleteButton").click(function () {
+        deleteDriver();
+    });
+    $("#adminPageCarUpdateButton").click(function () {
+        updateCar();
+    });
+    $("#rentButton").click(function () {
+        rent();
+        rentDetails();
+    });
+
+    $("#customerPageCarTable>tr").click(function () {
+        console.log("BBB");
+        loadRentCar();
+    });
+    $("#customerPageLogOutButton").click(function () {
+        console.log("AAAA");
+    });
+
+    loadAllCustomer();
+    loadAllDriver();
+    loadAllCar();
+    loadAllRentCar();
+
+    /*    admin    */
+
+    function updateCustomer() {
+        var adminObject = {
+            username: $("#adminPageUsername").val(),
+            password: $("#adminPagePassword").val()
+        }
+        $.ajax({
+            url: "http://localhost:8084/rental/admin",
+            method: "PUT",
+            contentType: "application/json",
+            data: JSON.stringify(adminObject),
+            success: function (res) {
+                if (res.code == 200) {
+                    alert("Successfully");
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+
+    /*    customer    */
+
+    function saveCustomer() {
+        var data = $("#customerRegisterForm").serialize();
+        $.ajax({
+            url: "http://localhost:8084/rental/web/customer",
+            method: "POST",
+            data: data,
+            success: function (res) {
+                if (res.code == 200) {
+                  alert("Successfully");
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+    function updateCustomer() {
+        var customerObject = {
+            id: $("#customerPageID").val(),
+            username: $("#customerPageUsername").val(),
+            password: $("#customerPagePassword").val(),
+            name: $("#customerPageName").val(),
+            address: $("#customerPageAddress").val(),
+            email: $("#customerPageEmail").val(),
+            number: $("#customerPageNumber").val()
+        }
+        $.ajax({
+            url: "http://localhost:8084/rental/web/customer",
+            method: "PUT",
+            contentType: "application/json",
+            data: JSON.stringify(customerObject),
+            success: function (res) {
+                if (res.code == 200) {
+                    alert("Successfully");
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+    function deleteCustomer() {
+        let customerId = $("#customerPageID").val();
+        $.ajax({
+            url: "http://localhost:8084/rental/web/customer" + "?id" + customerId,
+            method: "DELETE",
+            success: function (res) {
+                if (res.code == 200) {
+                    alert("Successfully");
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+    function loadAllCustomer() {
+        $("#customerTableAdmin").empty();
+        $.ajax({
+            url: "http://localhost:8084/rental/web/customer",
+            method: "GET",
+            success: function (res) {
+                for (const customer of res.data) {
+                    let row = `<tr><td>${customer.customerId}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.email}</td><td>${customer.number}</td><td><button>Delete</button></td></tr>`;
+                    $("#customerTableAdmin").append(row);
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+
+    /*    driver    */
+
+    function saveDriver() {
+        var data = $("#driverRegisterForm").serialize();
+        $.ajax({
+            url: "http://localhost:8084/rental/driver",
+            method: "POST",
+            data: data,
+            success: function (res) {
+                if (res.code == 200) {
+                    alert("Successfully");
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+    function updateDriver() {
+        var driverObject = {
+            id: $("#driverPageID").val(),
+            username: $("#driverPageUsername").val(),
+            password: $("#driverPagePassword").val(),
+            name: $("#driverPageName").val(),
+            address: $("#driverPageAddress").val(),
+            email: $("#driverPageEmail").val(),
+            number: $("#driverPageNumber").val()
+        }
+        $.ajax({
+            url: "http://localhost:8084/rental/driver",
+            method: "PUT",
+            contentType: "application/json",
+            data: JSON.stringify(driverObject),
+            success: function (res) {
+                if (res.code == 200) {
+                    alert("Successfully");
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+    function deleteDriver() {
+        let driverId = $("#driverPageID").val();
+        $.ajax({
+            url: "http://localhost:8084/rental/driver" + "?id" + driverId,
+            method: "DELETE",
+            success: function (res) {
+                if (res.code == 200) {
+                    alert("Successfully");
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+    function loadAllDriver() {
+        $("#driverTableAdmin").empty();
+        $.ajax({
+            url: "http://localhost:8084/rental/driver",
+            method: "GET",
+            success: function (res) {
+                for (const driver of res.data) {
+                    let row = `<tr><td>${driver.driverId}</td><td>${driver.name}</td><td>${driver.address}</td><td>${driver.email}</td><td>${driver.number}</td><td><button>Delete</button></td></tr>`;
+                    $("#driverTableAdmin").append(row);
+                }
+                $("#driverComboBox").empty();
+                let i = 1;
+                for (const driver of res.data) {
+                    let comboBox = '<option id="i">'+driver.driverId+'</option>';
+                    i = i+1;
+                    $("#driverComboBox").append(comboBox);
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+
+    /*    car    */
+
+    function saveCar() {
+        var data = $("#carRegisterForm").serialize();
+        $.ajax({
+            url: "http://localhost:8084/rental/car",
+            method: "POST",
+            data: data,
+            success: function (res) {
+                if (res.code == 200) {
+                    alert("Successfully");
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+    function updateCar() {
+        var carObject = {
+            carId: $("#carID").val(),
+            brand: $("#carBrand").val(),
+            qty: $("#carQty").val(),
+            type: $("#carType").val(),
+            passenger: $("#carPassenger").val(),
+            transmissionType: $("#carTransmissionType").val(),
+            fuelType: $("#carFuelType").val(),
+            freeMileagePrice: $("#carFreeMileagePrice").val(),
+            freeMileageDuration: $("#carFreeMileageDuration").val(),
+            extraKMPrice: $("#carExtraKMPrice").val(),
+            registrationNumber: $("#carRegistrationNumber").val(),
+            color: $("#carColor").val()
+        }
+        $.ajax({
+            url: "http://localhost:8084/rental/car",
+            method: "PUT",
+            contentType: "application/json",
+            data: JSON.stringify(carObject),
+            success: function (res) {
+                if (res.code == 200) {
+                    alert("Successfully");
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+    function deleteCar() {
+        $("#adminPageCarTable>tr").click(function () {
+            let carId = $(this).children().eq(0).text();
+            $.ajax({
+                url: "http://localhost:8084/rental/car" + "?id" + id,
+                method: "DELETE",
+                success: function (res) {
+                    if (res.code == 200) {
+                        alert("Successfully");
+                    }
+                },
+                error: function (ob) {
+                    alert(ob.responseJSON.message);
+                }
+            });
+        });
+    }
+    function loadAllCar() {
+        $("#adminPageCarTable").empty();
+        $.ajax({
+            url: "http://localhost:8084/rental/car",
+            method: "GET",
+            success: function (res) {
+                for (const car of res.data) {
+                    let row = `<tr><td>${car.carId}</td><td>${car.brand}</td><td>${car.type}</td><td>${car.passenger}</td><td>${car.transmissionType}</td><td>${car.fuelType}</td><td>${car.freeMileagePrice}</td><td>${car.freeMileageDuration}</td><td>${car.extraKMPrice}</td><td>${car.registrationNumber}</td><td>${car.color}</td></tr>`;
+                    $("#adminPageCarTable").append(row);
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+    function loadAllRentCar() {
+        $("#customerPageCarTable").empty();
+        $.ajax({
+            url: "http://localhost:8084/rental/car",
+            method: "GET",
+            success: function (res) {
+                for (const car of res.data) {
+                    let row = `<tr><td>${car.carId}</td><td>${car.brand}</td><td>${car.type}</td><td>${car.qty}</td><td>${car.transmissionType}</td><td>${car.fuelType}</td></tr>`;
+                    $("#customerPageCarTable").append(row);
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+    function loadRentCar() {
+        $("#customerPageCarTable > tr").click(function () {
+            console.log("A");
+            var carId = $(this).children().eq(0).text();
+            $.ajax({
+                url: "http://localhost:8084/rental/car" + "/" + carId,
+                method: "GET",
+                success: function (res) {
+                    console.log("B");
+                    if (res.code = 200) {
+                        var car = res.data;
+                        $("#viewRentCarType").text(car.type);
+                        $("#viewRentCarBrand").val(car.brand);
+                        $("#viewRentCarTransmission").val(car.transmissionType);
+                        $("#viewRentCarColor").val(car.color);
+                        $("#rentPassenger").val(car.passenger);
+                        $("#rentFuelType").text(car.fuelType);
+                        $("#rentFreeMPrice").val(car.freeMileagePrice);
+                        $("#rentFreeMDuration").val(car.freeMileageDuration);
+                        $("#rentExtraKMPrice").val(car.extraKMPrice);
+                        $("#rentEnterQty").val(car.extraKMPrice);
+                        alert("Successfully");
+                    } else {
+                        alert("No");
+                    }
+                },
+                error:function (ob){
+                    alert(ob.responseJSON.message);
+                }
+            });
+        });
+    }
+
+    /*    rent    */
+
+    $("#rentID").text("R001")
+    function rent() {
+        var rentObject = {
+            rentId: $("#rentID").val(),
+            customerId: $("#customerPageID").val()
+        }
+        $.ajax({
+            url: "http://localhost:8084/rental/rent",
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(rentObject),
+            success: function (res) {
+                if (res.code == 200) {
+                    alert("Successfully");
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+    let rentDetailsIds = "RD001";
+    let times = "08:30";
+    let dates = "2022:08:06";
+    function rentDetails() {
+        var rentDetailsObject = {
+            rentDetailsId: rentDetailsIds,
+            rentId: $("#rentID").val(),
+            driverId: $("#rentDriverId").val(),
+            qty: $("#rentEnterQty").val(),
+            rentDuration: $("#rentDuration").val(),
+            time: times,
+            date: dates
+        }
+        $.ajax({
+            url: "http://localhost:8084/rental/rentDetails",
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(rentDetailsObject),
+            success: function (res) {
+                if (res.code == 200) {
+                    alert("Successfully");
+                }
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+
+</script>
 
 </body>
 </html>

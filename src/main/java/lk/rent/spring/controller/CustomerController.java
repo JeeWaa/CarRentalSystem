@@ -1,13 +1,17 @@
 package lk.rent.spring.controller;
 
+import lk.rent.spring.dto.CustomerDTO;
 import lk.rent.spring.entity.Customer;
 import lk.rent.spring.service.impl.CustomerService;
+import lk.rent.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("customer")
+@RequestMapping("web/customer")
 @RestController
 @CrossOrigin
 public class CustomerController {
@@ -15,29 +19,33 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
 
-    @PostMapping
-    public void saveCustomer(@ModelAttribute Customer customer) {
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO customer) {
         customerService.saveCustomer(customer);
+        return new ResponseUtil(200,"Saved",null);
     }
 
-    @PutMapping
-    public void updateCustomer(@RequestBody Customer customer) {
+    @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil updateCustomer(@RequestBody CustomerDTO customer) {
         customerService.updateCustomer(customer);
+        return new ResponseUtil(200,"Updated",null);
     }
 
-    @DeleteMapping(params = {"id"})
-    public void deleteCustomer(@RequestParam String id) {
+    @DeleteMapping(params = {"id"},produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil deleteCustomer(@RequestParam String id) {
         customerService.deleteCustomer(id);
+        return new ResponseUtil(200,"Deleted",null);
     }
 
-    @GetMapping(path = "/id")
-    public Customer searchCustomer(@PathVariable String id) {
-        return customerService.searchCustomer(id);
+    @GetMapping(path = "/id",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil searchCustomer(@PathVariable String id) {
+        return new ResponseUtil(200,"Ko",customerService.searchCustomer(id));
     }
 
-    @GetMapping
-    public List<Customer> getAllCustomer() {
-        return customerService.getAllCustomer();
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllCustomer() {
+        return new ResponseUtil(200,"Ko",customerService.getAllCustomer());
     }
 
 }

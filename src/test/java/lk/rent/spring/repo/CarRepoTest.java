@@ -24,20 +24,20 @@ class CarRepoTest {
 
     @Test
     public void save() {
-        Car car1 = new Car("V001","","",4,"","",2000.00,"10h",1000.00,"","Red");
-        Car car2 = new Car("V002","","",4,"","",2000.00,"10h",1000.00,"","Red");
-        repo.save(car1);
-        repo.save(car2);
+//        Car car1 = new Car("V001","","",4,"","",2000.00,"10h",1000.00,"","Red");
+//        Car car2 = new Car("V002","","",4,"","",2000.00,"10h",1000.00,"","Red");
+//        repo.save(car1);
+//        repo.save(car2);
     }
 
     @Test
     public void update() {
-        if (repo.existsById("V002")) {
-            Car car2 = new Car("V002","","",2,"","",2000.00,"10h",1000.00,"","Red");
-            repo.save(car2);
-        }else {
-            throw new RuntimeException("No update");
-        }
+//        if (repo.existsById("V002")) {
+//            Car car2 = new Car("V002","","",2,"","",2000.00,"10h",1000.00,"","Red");
+//            repo.save(car2);
+//        }else {
+//            throw new RuntimeException("No update");
+//        }
     }
 
     @Test

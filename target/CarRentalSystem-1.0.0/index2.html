@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UIU2</title>
+
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<section class="container-fluid p-4 bg-primary text-white">
+    <h1 class="fw-bold">AJAX With jQuery</h1>
+</section>
+<section class="container-fluid mt-3">
+    <!--    customer save-->
+    <div class="row mt-3">
+        <div class="col-4">
+            <form id="customerForm">
+                <div class="mb-3">
+                    <label class="form-label" for="cusID">Customer ID</label>
+                    <input class="form-control" id="cusID" name="id" placeholder="Customer ID" type="text">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="cusName">Customer Name</label>
+                    <input class="form-control" id="cusName" name="name" placeholder="Customer Name"
+                           type="text">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="cusAddress">Customer Address</label>
+                    <input class="form-control" id="cusAddress" name="address" placeholder="Customer Address"
+                           type="text">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="cusSalary">Customer Salary</label>
+                    <input class="form-control" id="cusSalary" name="salary" placeholder="Customer Salary"
+                           type="text">
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary" id="btnSaveCustomer" type="button">Save</button>
+                    <button class="btn btn-warning" id="btnUpdateCustomer" type="button">Update</button>
+                    <button class="btn btn-danger" id="btnDeleteCustomer" type="button">Delete</button>
+                    <button class="btn btn-success" id="btnGetAllCustomers" type="button">Get All</button>
+                </div>
+            </form>
+        </div>
+        <div class="col">
+            <table class="table table-bordered table-hover">
+                <thead class="bg-danger text-white">
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Salary</th>
+                </tr>
+                </thead>
+                <tbody id="tblCustomerJson">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+
+    $("#btnSaveCustomer").click(function () {
+        saveCustomer();
+    });
+
+    function saveCustomer() {
+        var data = $("#customerForm").serialize(); // return query string of form with name:type-value
+        $.ajax({
+            url: "http://localhost:8084/rental/web/customer",
+            method: "POST",
+            data: data,// if we send data with the request
+            success: function (res) {
+                console.log(res);
+                /*if (res.code == 200) {
+                  alert("Successfully Customer Registered");
+                  loadAllCustomers();
+                  clearForm();
+                }*/
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+
+</script>
+
+</body>
+</html>
